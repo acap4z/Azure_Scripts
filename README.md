@@ -2,7 +2,7 @@
 
 ## Get-AzureADPSPermissions_graph.ps1
 
-Updated version of `Get-AzureADPSPermissions`, a script that was originally created by @psignoret using the now deprecated Azure AD module (https://gist.github.com/psignoret).
+Updated version of `Get-AzureADPSPermissions` that uses the Graph Powershell SDK cmdlets. This script was originally created by @psignoret (https://gist.github.com/psignoret), which uses the old Azure AD Powershell modules.
 
 ~~~
 Get-Help .\Get-AzureADPSPermissions_graph.ps1 -detailed

@@ -68,3 +68,24 @@ PARAMETERS
 
     Gets all permissions granted to all apps and includes additional properties for users and service principals.
 ~~~
+
+## Get-EntepriseAppsPermissions_api.ps1
+
+Script that lists delegated and application permissions for every Enterprise App that is not a Microsoft application using direct REST calls to the Graph API.
+
+~~~
+Get-Help .\Get-EntepriseAppsPermissions_api.ps1 -examples
+
+NAME
+    C:\Users\Alberto\Desktop\Get-EntepriseAppsPermissions_api.ps1
+
+SYNOPSIS
+    Lists delegated and application permissions for every Enterprise App that is not a Microsoft application using direct REST calls to the Graph API.
+
+
+    -------------------------- EXAMPLE 1 --------------------------
+
+    PS C:\>.\Get-EntepriseAppsPermissions_api.ps1 | Export-Csv -Path "permissions.csv" -NoTypeInformation
+
+    Generates a CSV report of all permissions granted to non-Microsoft enterprise apps.
+~~~

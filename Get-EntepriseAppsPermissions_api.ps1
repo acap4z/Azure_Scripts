@@ -8,6 +8,10 @@
 	
 .NOTES
 	Script created by @acap4z (inspired by @psignoret's Gists)
+	
+	[Changelog]
+	v1.1 (20/02/2023) - New 'az login' check. API call replaced by the az cli built-in command.
+	v1.0 (16/02/2023) - First version.
 #>	
 
 # Permission lookup table
@@ -748,12 +752,13 @@ $permissionLookup = @{
 }
 
 # Query all apps
-try {
-    $response = az rest -u 'https://graph.microsoft.com/v1.0/applications' | ConvertFrom-JSON
-} catch {
-    throw "You must call 'az login' before running this script. This requires Azure CLI to be installed."
+$response = az ad app list --all | ConvertFrom-JSON
+if ($response -eq $null){
+    throw "You must call 'az login --allow-no-subscriptions' before running this script. This requires Azure CLI to be installed."
 }
-$apps = $response.value
+
+
+$apps = $response
 
 $apps | ForEach-Object{
 	$appId = $_.appId

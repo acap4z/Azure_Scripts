@@ -36,7 +36,7 @@ Display all CAPs that are enabled, excluding off and report-only policies, in a 
 Script that lists delegated and application permissions for every Enterprise App that is not a Microsoft application using the Graph API through Azure CLI.
 
 ### Example
-Lists delegated and application permissions for every Enterprise App (default Microsoft applications are excluded).
+Lists delegated and application permissions for every Enterprise App.
 ~~~
 .\Get-EntepriseAppsPermissions_api.ps1 | Export-Csv -Path "permissions.csv" -NoTypeInformation
 ~~~

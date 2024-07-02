@@ -10,6 +10,7 @@
 	Script created by @acap4z (inspired by @psignoret's Gists)
 	
 	[Changelog]
+ 	v1.2 (02/07/2024) - Permissions lookup table updated (by Alejandro Cruz @pwnedshell)
 	v1.1 (20/02/2023) - New 'az login' check. API call replaced by the az cli built-in command.
 	v1.0 (16/02/2023) - First version.
 #>	
